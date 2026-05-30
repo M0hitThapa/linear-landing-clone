@@ -102,7 +102,7 @@ export const Navbar = () => {
           </svg>
         </Link>
 
-        <NavigationMenu>
+        <NavigationMenu className="flex items-center justify-between gap-5">
           <NavigationMenuList>
             {dropdownMenus.map(({ label, items, className }) => (
               <NavigationMenuItem key={label} className={className}>
@@ -128,6 +128,53 @@ export const Navbar = () => {
                 </NavigationMenuLink>
               </NavigationMenuItem>
             ))}
+          </NavigationMenuList>
+          <div className="h-[15px] w-px bg-neutral-700 " />
+          <NavigationMenuList className="flex items-center justify-between gap-2">
+            <NavigationMenuItem className="relative inline-block group">
+              <NavigationMenuLink
+                asChild
+                className={navigationMenuTriggerStyle()}
+              >
+                <Link href="/login" className="text-neutral-400">
+                  Log In
+                </Link>
+              </NavigationMenuLink>
+
+              <div
+                className="absolute invisible opacity-0 group-hover:visible group-hover:opacity-100
+                              top-full left-1/2 -translate-x-1/2 mt-2
+                              transition-all duration-300 delay-0 group-hover:delay-[1000ms] ease-in-out "
+              >
+                <div
+                  className="relative px-3 py-1.5 text-sm text-white bg-neutral-950 rounded-xl
+                                backdrop-blur-sm bg-opacity-90 border-2 border-neutral-800 shadow-xl"
+                >
+                  <div className="flex items-center space-x-2">
+                    <p className="text-sm">Login</p>
+                    <div className="bg-neutral-600 px-2.5 py-1 rounded-md">
+                      <span className="text-white text-sm font-semibold">
+                        L
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuLink
+                asChild
+                className={navigationMenuTriggerStyle()}
+              >
+                <Link
+                  href="/login"
+                  className="text-neutral-900 bg-neutral-200 hover:bg-white hover:text-neutral-900 font-medium"
+                >
+                  Sign up
+                </Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </Container>
