@@ -147,13 +147,13 @@ export const Navbar = () => {
                               transition-all duration-300 delay-0 group-hover:delay-[1000ms] ease-in-out "
               >
                 <div
-                  className="relative px-3 py-1.5 text-sm text-white bg-neutral-950 rounded-xl
-                                backdrop-blur-sm bg-opacity-90 border-2 border-neutral-800 shadow-xl"
+                  className="relative px-2 py-1 text-xs text-white bg-neutral-950 rounded-md
+                                backdrop-blur-sm bg-opacity-90 border border-neutral-800 shadow-xl"
                 >
                   <div className="flex items-center space-x-2">
-                    <p className="text-sm">Login</p>
-                    <div className="bg-neutral-600 px-2.5 py-1 rounded-md">
-                      <span className="text-white text-sm font-semibold">
+                    <p className="text-xs">LogIn</p>
+                    <div className="bg-neutral-600 px-1.5 py-0.5 rounded-sm">
+                      <span className="text-white text-xs font-semibold">
                         L
                       </span>
                     </div>
