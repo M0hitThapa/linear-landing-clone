@@ -128,3 +128,21 @@
         @apply font-sans;
     }
 }
+
+@keyframes pulse-ring {
+    0% {
+        box-shadow: 0 0 0 0 rgba(25, 28, 47, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 0 10px rgba(25, 28, 47, 0);
+    }
+}
+
+.pulse-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: transparent;
+    animation: pulse-ring 1.4s ease-in-out infinite;
+}
